@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LockView">
+        <attr name="bg_normal" format="reference"/>
+        <attr name="bg_pressed" format="reference"/>
+        <attr name="bg_error" format="reference"/>
+        <attr name="line_width" format="dimension"/>
+        <attr name="line_color" format="color"/>
+    </declare-styleable>
+</resources>

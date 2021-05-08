@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    <string name="app_name">ElevationDrag</string>
+    <string name="intro_message">
+        <![CDATA[
+        
+            
+            这个程序演示了拖动带阴影的View的效果。
+            
+        
+        ]]>
+    </string>
+</resources>
