@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.sky.demo.R;
 import com.sky.demo.model.CourseEntity;
-import com.sky.demo.ui.BaseAdapter;
+import com.sky.demo.ui.RecyclerAdapter;
 import com.sky.demo.utils.ImageLoaderAsync;
 
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.List;
  * @Description:
  * @date 15/12/9 下午8:52
  */
-public class LoaderURLAdapter extends BaseAdapter<CourseEntity, LoaderURLAdapter.MyHolder> {
+public class LoaderURLAdapter extends RecyclerAdapter<CourseEntity, LoaderURLAdapter.MyHolder> {
     private ImageLoaderAsync imageLoader;
 
     public LoaderURLAdapter(int layoutId) {

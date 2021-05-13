@@ -11,16 +11,16 @@ import java.util.Stack;
  * @date 2015年4月12日 下午1:33:47
  */
 @Deprecated
-public class ActivityDepManager {
+public class ActivityManager {
     private static Stack<Activity> activityStack;
-    private static ActivityDepManager instance;
+    private static ActivityManager instance;
 
-    private ActivityDepManager() {
+    private ActivityManager() {
     }
 
-    public static ActivityDepManager getActivityManager() {
+    public static ActivityManager getActivityManager() {
         if (instance == null) {
-            instance = new ActivityDepManager();
+            instance = new ActivityManager();
         }
         return instance;
     }

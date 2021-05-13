@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 import com.sky.demo.R;
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * @author sky QQ:1136096189
  * @Description: TODO
@@ -18,7 +21,17 @@ import com.sky.demo.R;
  */
 public class MyHeart extends BaseActivity {
     TextView tv;
-
+    private Lock lock= new ReentrantLock();
+    int nub =1;
+    //lock测试
+    public void nub(){
+        lock.lock();//锁定
+        try{
+            nub++;
+        }finally {
+            lock.unlock();//解锁
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

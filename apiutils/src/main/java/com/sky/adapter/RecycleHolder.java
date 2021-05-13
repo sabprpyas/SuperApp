@@ -1,4 +1,4 @@
-package com.sky.demo.ui;
+package com.sky.adapter;
 
 import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
@@ -12,25 +12,13 @@ import android.widget.TextView;
  * @Description:
  * @date 15/12/13 下午5:53
  */
-public class BaseHolder extends RecyclerView.ViewHolder {
+public class RecycleHolder extends RecyclerView.ViewHolder {
     private SparseArray<View> mViews;
-//    private static BaseHolder holder;
 
-    public BaseHolder(View itemView) {
+    public RecycleHolder(View itemView) {
         super(itemView);
         mViews = new SparseArray<>();
     }
-
-//    public static BaseHolder getHolder(View view) {
-//        if (holder == null) {
-//            synchronized (BaseHolder.class) {
-//                if (holder == null) {
-//                    holder = new BaseHolder(view);
-//                }
-//            }
-//        }
-//        return holder;
-//    }
 
     public <T extends View> T getView(int id) {
         View view = mViews.get(id);
@@ -42,8 +30,6 @@ public class BaseHolder extends RecyclerView.ViewHolder {
     }
 
     public void setText(int id, CharSequence text) {
-//        TextView tv=getView(id);
-//        tv.setText(text);
         ((TextView) getView(id)).setText(text);
     }
 

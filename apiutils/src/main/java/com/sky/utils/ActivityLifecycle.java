@@ -1,4 +1,4 @@
-package com.sky.demo.utils;
+package com.sky.utils;
 
 import android.app.Activity;
 import android.app.Application;
@@ -16,6 +16,7 @@ public class ActivityLifecycle implements Application.ActivityLifecycleCallbacks
     private Stack<Activity> activityStack;
     private Activity currentActivity;
     private static ActivityLifecycle instance;
+
 
     public static ActivityLifecycle getInstance() {
         if (instance == null)
@@ -50,7 +51,6 @@ public class ActivityLifecycle implements Application.ActivityLifecycleCallbacks
 
     @Override
     public void onActivityPaused(Activity activity) {
-
     }
 
     @Override
@@ -88,5 +88,22 @@ public class ActivityLifecycle implements Application.ActivityLifecycleCallbacks
                 activityStack.lastElement().finish();
                 activityStack.remove(activityStack.lastElement());
             } else return;
+    }
+
+    /**
+     * 获取当前activity的位置
+     * @return
+     */
+    public int getCurrent() {
+        return activityStack.size() - 1;
+    }
+
+    /**
+     * 获取指定的activity
+     * @param position
+     * @return
+     */
+    public Class<? extends Activity> getAppointActivity(int position) {
+        return activityStack.get(position).getClass();
     }
 }

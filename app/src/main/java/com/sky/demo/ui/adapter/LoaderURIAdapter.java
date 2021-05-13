@@ -10,7 +10,7 @@ import android.view.ViewOutlineProvider;
 import android.widget.ImageView;
 
 import com.sky.demo.R;
-import com.sky.demo.ui.BaseAdapter;
+import com.sky.demo.ui.RecyclerAdapter;
 import com.sky.demo.utils.ImageLoaderExecutors;
 
 /**
@@ -18,7 +18,7 @@ import com.sky.demo.utils.ImageLoaderExecutors;
  * @Description:
  * @date 15/12/9 下午8:52
  */
-public class LoaderURIAdapter extends BaseAdapter<String, LoaderURIAdapter.MyHolder> {
+public class LoaderURIAdapter extends RecyclerAdapter<String, LoaderURIAdapter.MyHolder> {
     private ImageLoaderExecutors imageLoader;
     public String parentPath;
 

@@ -6,8 +6,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sky.demo.R;
-import com.sky.demo.ui.BaseAdapter;
-import com.sky.demo.ui.BaseHolder;
+import com.sky.demo.ui.RecyclerAdapter;
+import com.sky.demo.ui.RecycleHolder;
 import com.sky.demo.ui.tree.Node;
 import com.sky.demo.ui.tree.TreeHelper;
 
@@ -18,7 +18,7 @@ import java.util.List;
  * @Description: TODO
  * @date 2015/9/28 17:34
  */
-public class TreeAdapter<T> extends BaseAdapter<Node, RecyclerView.ViewHolder> {
+public class TreeAdapter<T> extends RecyclerAdapter<Node, RecyclerView.ViewHolder> {
     private List<Node> nodes;
 
     public TreeAdapter(int layoutId, int layoutFootViewId) {
@@ -49,12 +49,12 @@ public class TreeAdapter<T> extends BaseAdapter<Node, RecyclerView.ViewHolder> {
 
     @Override
     protected RecyclerView.ViewHolder onCreateBodyHolder(View view) {
-        return  new BaseHolder(view);
+        return  new RecycleHolder(view);
     }
 
     @Override
     protected RecyclerView.ViewHolder onCreateFootHolder(View footView) {
-        return new BaseHolder(footView);
+        return new RecycleHolder(footView);
     }
 
     @Override
@@ -78,7 +78,7 @@ public class TreeAdapter<T> extends BaseAdapter<Node, RecyclerView.ViewHolder> {
 //            }, 3000);
 //            return;
 //        }
-        BaseHolder holder = (BaseHolder) viewHolder;
+        RecycleHolder holder = (RecycleHolder) viewHolder;
         Node node = nodes.get(position);
         if (node.getIcon() == -1) {
             holder.getView(R.id.img).setVisibility(View.INVISIBLE);

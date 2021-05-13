@@ -13,7 +13,7 @@ import java.util.List;
  * @Description: RecyclerView的万能适配器
  * @date 2015/9/29 16:46
  */
-public abstract class BaseAdapter<T, VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
+public abstract class RecyclerAdapter<T, VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
     //viewItem的点击事件监听
     protected OnItemClickListener onItemClickListener;
     protected Context context;
@@ -27,11 +27,11 @@ public abstract class BaseAdapter<T, VH extends RecyclerView.ViewHolder> extends
 
     protected static final int LASTITEM = -1;
 
-    public BaseAdapter(int layoutId) {
+    public RecyclerAdapter(int layoutId) {
         this.layoutId = layoutId;
     }
 
-    public BaseAdapter(int layoutId, int layoutFootViewId) {
+    public RecyclerAdapter(int layoutId, int layoutFootViewId) {
         this.layoutId = layoutId;
         this.layoutFootViewId = layoutFootViewId;
     }

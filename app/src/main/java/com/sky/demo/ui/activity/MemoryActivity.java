@@ -17,7 +17,7 @@ import android.widget.TextView;
 import com.sky.demo.R;
 import com.sky.demo.model.ProcessEntity;
 import com.sky.demo.ui.BaseActivity;
-import com.sky.demo.ui.BaseAdapter;
+import com.sky.demo.ui.RecyclerAdapter;
 import com.sky.demo.ui.adapter.ProcessAdapter;
 import com.sky.demo.ui.widget.pending.MyRecyclerView;
 
@@ -46,7 +46,7 @@ public class MemoryActivity extends BaseActivity {
         getRunningAppProcessInfo();
         adapter = new ProcessAdapter(R.layout.adapter_memory);
         adapter.setDatas(processEntities);
-        adapter.setOnItemClickListener(new BaseAdapter.OnItemClickListener() {
+        adapter.setOnItemClickListener(new RecyclerAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, final int position) {
                 new AlertDialog.Builder(MemoryActivity.this).setMessage("是否杀死该进程")
