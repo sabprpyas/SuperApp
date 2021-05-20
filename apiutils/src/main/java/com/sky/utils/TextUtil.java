@@ -8,28 +8,53 @@ import java.text.DecimalFormat;
 
 /**
  * @author sky QQ:1136096189
- * @Description: TODO
+ * @Description: TODO  String工具
  * @date 16/4/21 下午1:08
  */
 public class TextUtil {
+    /**
+     * 获取控件中的内容
+     *
+     * @param text
+     * @return
+     */
     @NonNull
     public static String getText(TextView text) {
         return text.getText().toString().trim();
     }
 
+    /**
+     * 非空判断,同时提示
+     *
+     * @param text
+     * @param toast
+     * @return
+     */
     public static boolean notNull(String text, String toast) {
         if (TextUtils.isEmpty(text)) {
-           ToastUtils.showShort(ActivityLifecycle.getInstance().getCurrentActivity(),toast + "不能为空");
+            ToastUtils.showShort(ActivityLifecycle.getInstance().getCurrentActivity(), toast + "不能为空");
             return true;
         }
         return false;
     }
 
+    /**
+     * 获取两位小数
+     *
+     * @param num
+     * @return
+     */
     @NonNull
     public static String getDecimalFormat(String num) {
         return getDecimalFormat(Double.parseDouble(num));
     }
 
+    /**
+     * 获取两位小数
+     *
+     * @param num
+     * @return
+     */
     @NonNull
     public static String getDecimalFormat(double num) {
         DecimalFormat df = new DecimalFormat("######0.00");
@@ -37,7 +62,8 @@ public class TextUtil {
     }
 
     /**
-     * 清楚HTML
+     * 清除HTML
+     *
      * @param content
      * @return
      */

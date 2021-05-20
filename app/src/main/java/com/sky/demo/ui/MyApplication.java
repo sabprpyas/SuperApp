@@ -3,8 +3,8 @@ package com.sky.demo.ui;
 import android.app.Application;
 
 import com.sky.demo.BuildConfig;
-import com.sky.demo.utils.ActivityLifecycle;
-import com.sky.demo.utils.ToastUtils;
+import com.sky.utils.ActivityLifecycle;
+import com.sky.utils.ToastUtils;
 
 import org.xutils.x;
 

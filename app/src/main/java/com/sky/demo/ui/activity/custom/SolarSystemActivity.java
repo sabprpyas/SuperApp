@@ -24,8 +24,8 @@ import com.sky.demo.ui.activity.ImageUriActivity;
 import com.sky.demo.ui.activity.viewpager.BottomTabBarActivity;
 import com.sky.demo.ui.activity.viewpager.TabLayoutActivity;
 import com.sky.demo.ui.widget.SolarSystem;
-import com.sky.demo.utils.JumpAct;
 import com.sky.demo.utils.pending.AppUtils;
+import com.sky.utils.JumpAct;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;

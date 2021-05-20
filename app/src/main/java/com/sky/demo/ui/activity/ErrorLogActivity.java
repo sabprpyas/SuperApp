@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.sky.demo.ui.BaseActivity;
-import com.sky.demo.utils.ActivityLifecycle;
+import com.sky.utils.ActivityLifecycle;
 
 /**
  * @author sky QQ:1136096189

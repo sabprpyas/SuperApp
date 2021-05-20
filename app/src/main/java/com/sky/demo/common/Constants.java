@@ -8,8 +8,6 @@ package com.sky.demo.common;
  */
 public class Constants {
     public static final String BASE_URL="http://uat.b.quancome.com/platform/api";
-    public static final String USERNAME="username";
-    public static final String ISONLINE="isOnline";
     public static final String ACTION_PUSH_DATA = "fm.data.push.action";
     public static final String ACTION_NEW_VERSION = "apk.update.action";
     public static final String ACTION_MY = "android.intent.action.MYBROADCAST";

@@ -5,9 +5,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.sky.adapter.RecyclerAdapter;
+import com.sky.adapter.RecyclerHolder;
 import com.sky.demo.R;
-import com.sky.demo.ui.RecyclerAdapter;
-import com.sky.demo.ui.RecycleHolder;
 import com.sky.demo.ui.tree.Node;
 import com.sky.demo.ui.tree.TreeHelper;
 
@@ -49,12 +49,12 @@ public class TreeAdapter<T> extends RecyclerAdapter<Node, RecyclerView.ViewHolde
 
     @Override
     protected RecyclerView.ViewHolder onCreateBodyHolder(View view) {
-        return  new RecycleHolder(view);
+        return  new RecyclerHolder(view);
     }
 
     @Override
     protected RecyclerView.ViewHolder onCreateFootHolder(View footView) {
-        return new RecycleHolder(footView);
+        return new RecyclerHolder(footView);
     }
 
     @Override
@@ -78,7 +78,7 @@ public class TreeAdapter<T> extends RecyclerAdapter<Node, RecyclerView.ViewHolde
 //            }, 3000);
 //            return;
 //        }
-        RecycleHolder holder = (RecycleHolder) viewHolder;
+        RecyclerHolder holder = (RecyclerHolder) viewHolder;
         Node node = nodes.get(position);
         if (node.getIcon() == -1) {
             holder.getView(R.id.img).setVisibility(View.INVISIBLE);

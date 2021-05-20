@@ -47,10 +47,10 @@ import com.sky.demo.ui.BaseActivity;
 import com.sky.demo.ui.activity.custom.PullDownActivity;
 import com.sky.demo.ui.adapter.MainAdapter;
 import com.sky.demo.ui.widget.pending.MyRecyclerView;
-import com.sky.demo.utils.JumpAct;
 import com.sky.demo.utils.LogUtils;
 import com.sky.demo.utils.NotficationManager;
 import com.sky.demo.utils.http.HttpDataUtils;
+import com.sky.utils.JumpAct;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;

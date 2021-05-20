@@ -6,10 +6,10 @@ import android.os.Build;
 import android.view.View;
 import android.view.ViewOutlineProvider;
 
+import com.sky.adapter.RecyclerAdapter;
+import com.sky.adapter.RecyclerHolder;
 import com.sky.demo.R;
 import com.sky.demo.model.ActivityModel;
-import com.sky.demo.ui.RecyclerAdapter;
-import com.sky.demo.ui.RecycleHolder;
 import com.sky.demo.utils.LogUtils;
 
 /**
@@ -17,7 +17,7 @@ import com.sky.demo.utils.LogUtils;
  * @Description:
  * @date 15/12/9 下午8:52
  */
-public class MainAdapter extends RecyclerAdapter<ActivityModel, RecycleHolder> {
+public class MainAdapter extends RecyclerAdapter<ActivityModel, RecyclerHolder> {
     public MainAdapter(int layoutId) {
         super(layoutId);
     }
@@ -27,14 +27,14 @@ public class MainAdapter extends RecyclerAdapter<ActivityModel, RecycleHolder> {
     private long start;
 
     @Override
-    protected RecycleHolder onCreateBodyHolder(View view) {
+    protected RecyclerHolder onCreateBodyHolder(View view) {
         start = System.nanoTime();
 //        return new BaseHolder(view);//19433695,588215
-        return new RecycleHolder(view);//19139763,1215232
+        return new RecyclerHolder(view);//19139763,1215232
     }
 
     @Override
-    protected void onAchieveHolder(RecycleHolder holder, int position) {
+    protected void onAchieveHolder(RecyclerHolder holder, int position) {
 //        holder.cardView.setRadius(new Random().nextInt(50));
 //        holder.cardView.setCardElevation(new Random().nextInt(100));
 ////        holder.cardView.setElevation(new Random().nextInt(100));

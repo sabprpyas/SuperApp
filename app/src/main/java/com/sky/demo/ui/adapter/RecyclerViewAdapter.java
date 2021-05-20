@@ -6,26 +6,26 @@ import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.view.View;
 
-import com.sky.demo.ui.RecyclerAdapter;
-import com.sky.demo.ui.RecycleHolder;
+import com.sky.adapter.RecyclerAdapter;
+import com.sky.adapter.RecyclerHolder;
 
 /**
  * @author sky QQ:1136096189
  * @Description:
  * @date 15/11/28 下午2:07
  */
-public class RecyclerViewAdapter extends RecyclerAdapter<Void,RecycleHolder> {
+public class RecyclerViewAdapter extends RecyclerAdapter<Void,RecyclerHolder> {
     public RecyclerViewAdapter(int layoutId) {
         super(layoutId);
     }
 
     @Override
-    protected RecycleHolder onCreateBodyHolder(View view) {
-        return new RecycleHolder(view);
+    protected RecyclerHolder onCreateBodyHolder(View view) {
+        return new RecyclerHolder(view);
     }
 
     @Override
-    protected void onAchieveHolder(RecycleHolder holder, int position) {
+    protected void onAchieveHolder(RecyclerHolder holder, int position) {
         final View view = holder.itemView;
         view.setOnClickListener(new View.OnClickListener() {
             @Override

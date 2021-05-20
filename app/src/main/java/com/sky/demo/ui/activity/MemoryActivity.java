@@ -14,10 +14,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.sky.adapter.RecyclerAdapter;
 import com.sky.demo.R;
 import com.sky.demo.model.ProcessEntity;
 import com.sky.demo.ui.BaseActivity;
-import com.sky.demo.ui.RecyclerAdapter;
 import com.sky.demo.ui.adapter.ProcessAdapter;
 import com.sky.demo.ui.widget.pending.MyRecyclerView;
 

@@ -21,9 +21,9 @@ import com.sky.demo.ui.activity.MainActivity;
 import com.sky.demo.ui.activity.viewpager.TabLayoutActivity;
 import com.sky.demo.ui.widget.ActionBar;
 import com.sky.demo.ui.widget.FlowLayout;
-import com.sky.demo.utils.ActivityLifecycle;
-import com.sky.demo.utils.JumpAct;
 import com.sky.demo.utils.LogUtils;
+import com.sky.utils.ActivityLifecycle;
+import com.sky.utils.JumpAct;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;

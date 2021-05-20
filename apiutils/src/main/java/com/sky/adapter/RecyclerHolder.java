@@ -12,10 +12,10 @@ import android.widget.TextView;
  * @Description:
  * @date 15/12/13 下午5:53
  */
-public class RecycleHolder extends RecyclerView.ViewHolder {
+public class RecyclerHolder extends RecyclerView.ViewHolder {
     private SparseArray<View> mViews;
 
-    public RecycleHolder(View itemView) {
+    public RecyclerHolder(View itemView) {
         super(itemView);
         mViews = new SparseArray<>();
     }

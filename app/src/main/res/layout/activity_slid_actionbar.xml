@@ -79,7 +79,7 @@
                 android:paddingRight="7dp"
                 android:visibility="gone"/>
 
-            <com.sky.demo.ui.widget.ScrollingTextView
+            <com.sky.widget.ScrollingTextView
                 android:id="@+id/actionbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

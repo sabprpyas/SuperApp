@@ -7,8 +7,8 @@ import android.net.ConnectivityManager;
 import android.os.BatteryManager;
 
 import com.sky.demo.common.Constants;
-import com.sky.demo.utils.NetworkJudgment;
-import com.sky.demo.utils.ToastUtils;
+import com.sky.utils.NetworkJudgment;
+import com.sky.utils.ToastUtils;
 
 /**
  * @author LiBin

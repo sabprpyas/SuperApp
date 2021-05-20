@@ -24,8 +24,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.sky.Common;
+import com.sky.api.IBase;
+import com.sky.api.IService;
 import com.sky.demo.R;
-import com.sky.demo.api.IBase;
 import com.sky.demo.api.IDataCallback;
 import com.sky.demo.common.Constants;
 import com.sky.demo.model.Employee;
@@ -33,12 +35,12 @@ import com.sky.demo.model.MData;
 import com.sky.demo.model.Person;
 import com.sky.demo.ui.bsc.MyService;
 import com.sky.demo.ui.dialog.DialogManager;
-import com.sky.demo.utils.JumpAct;
 import com.sky.demo.utils.LogUtils;
-import com.sky.demo.utils.NetworkJudgment;
 import com.sky.demo.utils.SPUtils;
-import com.sky.demo.utils.ToastUtils;
 import com.sky.demo.utils.UIHandler;
+import com.sky.utils.JumpAct;
+import com.sky.utils.NetworkJudgment;
+import com.sky.utils.ToastUtils;
 
 import org.xutils.x;
 
@@ -48,7 +50,7 @@ import org.xutils.x;
  * @Description: TODO 基类activity
  * @date 2015年3月26日 下午4:01:00
  */
-public class BaseActivity extends AppCompatActivity implements IBase, Toolbar.OnMenuItemClickListener {
+public class BaseActivity extends AppCompatActivity implements IBase, IService, Toolbar.OnMenuItemClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -295,31 +297,6 @@ public class BaseActivity extends AppCompatActivity implements IBase, Toolbar.On
         }
     };
 
-    @Override
-    public String getUserName() {
-        return (String) SPUtils.get(this, Constants.USERNAME, "");
-    }
-
-    @Override
-    public void showLoading() {
-        DialogManager.showDialog(this);
-    }
-
-    @Override
-    public void hideLoading() {
-        DialogManager.disDialog();
-    }
-
-    @Override
-    public boolean getUserOnlineState() {
-        return (boolean) SPUtils.get(this, Constants.ISONLINE, false);
-    }
-
-    @Override
-    public void setUserOnlineState(boolean isOnline) {
-        SPUtils.put(this, Constants.ISONLINE, true);
-    }
-
     /**
      * 在这里开启所有需要开启的服务
      */
@@ -355,12 +332,91 @@ public class BaseActivity extends AppCompatActivity implements IBase, Toolbar.On
     }
 
     @Override
+    public void initViews() {
+
+    }
+
+    @Override
+    public void initData() {
+
+    }
+
+    @Override
+    public String getUserName() {
+        return getObject(Common.USERNAME, "");
+    }
+
+    @Override
+    public String getUserId() {
+        return getObject(Common.USERID, "");
+    }
+
+    @Override
+    public String getPhone() {
+        return getObject(Common.PHONE, "");
+    }
+
+    @Override
+    public String getToken() {
+        return getObject(Common.TOKEN, "");
+    }
+
+    @Override
+    public void showLoading() {
+        DialogManager.showDialog(this);
+    }
+
+    @Override
+    public void hideLoading() {
+        DialogManager.disDialog();
+    }
+
+    @Override
+    public boolean getUserOnlineState() {
+        return getObject(Common.ISONLINE, false);
+    }
+
+    @Override
+    public void setUserOnlineState(boolean isOnline) {
+        setObject(Common.ISONLINE, true);
+    }
+
+    @Override
     public boolean hasInternetConnected() {
         return NetworkJudgment.isConnected(this);
     }
 
+    /**
+     * 检查是否登录,未登录跳转到登录页
+     *
+     * @return
+     */
+    public boolean checkLogin() {
+        if (!getUserOnlineState()) {
+            isLogin(4);
+            return true;
+        }
+        return false;
+    }
+
+    public void isLogin(int id) {
+    }
+
 
     @Override
+    public void startActivity(Intent intent) {
+        super.startActivity(intent);
+        overridePendingTransition(com.sky.R.anim.in_from_right, com.sky.R.anim.out_to_left);
+    }
+
+    public <T extends Object> T getObject(String text, T a) {
+        return (T) SPUtils.get(this, text, a);
+    }
+
+    public <T extends Object> void setObject(String text, T a) {
+        SPUtils.put(this, text, a);
+    }
+
     public void isExit() {
         isExit(0);
     }
@@ -395,7 +451,7 @@ public class BaseActivity extends AppCompatActivity implements IBase, Toolbar.On
                             public void onClick(DialogInterface dialog,
                                                 int which) {
                                 dialog.cancel();
-                                JumpAct.jumpActivity(BaseActivity.this,new Intent(Settings.ACTION_WIRELESS_SETTINGS));
+                                JumpAct.jumpActivity(BaseActivity.this, new Intent(Settings.ACTION_WIRELESS_SETTINGS));
                             }
                         })
                 .setNegativeButton("取消", new DialogInterface.OnClickListener() {

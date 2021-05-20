@@ -9,8 +9,8 @@ import android.view.View;
 import android.view.ViewOutlineProvider;
 import android.widget.ImageView;
 
+import com.sky.adapter.RecyclerAdapter;
 import com.sky.demo.R;
-import com.sky.demo.ui.RecyclerAdapter;
 import com.sky.demo.utils.ImageLoaderExecutors;
 
 /**

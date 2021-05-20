@@ -11,13 +11,14 @@ dependencies {
     compile 'com.nineoldandroids:library:2.4.0'
     //    compile 'com.jakewharton:butterknife:7.0.1'
     compile 'org.xutils:xutils:3.3.4'
+    compile project(':apiutils')
 }
 android {
     compileSdkVersion 23 //编译所需sdk版本
     buildToolsVersion '23.0.2'//编译所需buildtools
     defaultConfig {
         applicationId "com.sky.demo"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 23 //个人认为最好 与compileSdkVersion相同
         versionCode 4//内部版本号码，升级时比对。
         versionName "1.4"//展示给用户看的版本信息

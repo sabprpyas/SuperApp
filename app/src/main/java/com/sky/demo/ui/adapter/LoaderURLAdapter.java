@@ -10,9 +10,9 @@ import android.view.ViewOutlineProvider;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.sky.adapter.RecyclerAdapter;
 import com.sky.demo.R;
 import com.sky.demo.model.CourseEntity;
-import com.sky.demo.ui.RecyclerAdapter;
 import com.sky.demo.utils.ImageLoaderAsync;
 
 import java.util.List;

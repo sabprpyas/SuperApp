@@ -13,7 +13,7 @@ import org.xutils.x;
  * @Description: TODO
  * @date 15/12/20 上午11:58
  */
-public class BaseFragment extends Fragment{
+public class BaseFragment extends Fragment {
     private boolean injected = false;
 
     @Override
