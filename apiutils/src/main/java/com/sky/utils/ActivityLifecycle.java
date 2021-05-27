@@ -9,7 +9,7 @@ import java.util.Stack;
 /**
  * @author sky
  * @ClassName: ActivityLifecycle
- * @Description: TODO activity管理类
+ * @Description: TODO activit
  * @date 2015年4月12日 下午1:33:47
  */
 public class ActivityLifecycle implements Application.ActivityLifecycleCallbacks {

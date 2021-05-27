@@ -1,4 +1,4 @@
-package com.sky.demo.utils;
+package com.sky.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

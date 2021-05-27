@@ -36,11 +36,11 @@ import com.sky.demo.model.Person;
 import com.sky.demo.ui.bsc.MyService;
 import com.sky.demo.ui.dialog.DialogManager;
 import com.sky.demo.utils.LogUtils;
-import com.sky.demo.utils.SPUtils;
-import com.sky.demo.utils.UIHandler;
 import com.sky.utils.JumpAct;
 import com.sky.utils.NetworkJudgment;
+import com.sky.utils.SPUtils;
 import com.sky.utils.ToastUtils;
+import com.sky.utils.UIHandler;
 
 import org.xutils.x;
 

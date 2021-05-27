@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * @author LiBin
- * @Description: RecyclerView的万能适配器
+ * @Description: RecyclerView的
  * @date 2015/9/29 16:46
  */
 public abstract class RecyclerAdapter<T, VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {

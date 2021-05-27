@@ -24,3 +24,28 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.android.support:recyclerview-v7:23.3.0'
 }
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'apiutils'
+
+    publishedGroupId = 'com.sky'
+    libraryName = 'ApiUtils'
+    artifact = 'apiutils'
+
+    libraryDescription = 'A wrapper for Facebook Native Like Button (LikeView) on Android'
+
+    siteUrl = 'https://github.com/SkyLB2016/SuperApp'
+    gitUrl = 'https://github.com/SkyLB2016/SuperApp.git'
+
+    libraryVersion = '1.1.1'
+
+    developerId = 'SkyLB2016'
+    developerName = 'libin (sky)'
+    developerEmail = 'libin@chongxiang.com.cn'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

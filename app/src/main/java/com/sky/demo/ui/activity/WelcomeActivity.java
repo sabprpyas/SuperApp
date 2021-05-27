@@ -12,9 +12,9 @@ import android.webkit.WebView;
 
 import com.sky.demo.R;
 import com.sky.demo.ui.BaseActivity;
-import com.sky.demo.utils.SPUtils;
 import com.sky.demo.utils.pending.FileUtils;
 import com.sky.utils.JumpAct;
+import com.sky.utils.SPUtils;
 
 /**
  * @author LiBin

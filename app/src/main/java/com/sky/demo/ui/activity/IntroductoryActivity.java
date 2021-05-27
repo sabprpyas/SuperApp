@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import com.sky.demo.R;
 import com.sky.demo.ui.BaseActivity;
 import com.sky.demo.ui.adapter.GuideContoler;
-import com.sky.demo.utils.SPUtils;
+import com.sky.utils.SPUtils;
 
 /**
  * @author LiBin

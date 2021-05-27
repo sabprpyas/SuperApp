@@ -1,4 +1,4 @@
-package com.sky.demo.utils;
+package com.sky.utils;
 
 import android.os.Handler;
 import android.os.Looper;
@@ -6,7 +6,7 @@ import android.os.Message;
 
 /**
  * @author 彬 QQ 1136096189
- * @Description: handler管理
+ * @Description: handler
  * @date 2015/8/17 15:30
  */
 public class UIHandler extends Handler {
