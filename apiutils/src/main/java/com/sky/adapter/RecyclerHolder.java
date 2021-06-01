@@ -6,11 +6,8 @@ import android.util.SparseArray;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 /**
- * @author sky QQ:1136096189
- * @Description:
- * @date 15/12/13 下午5:53
+ * Created by sky on 16/5/10 下午3:50.
  */
 public class RecyclerHolder extends RecyclerView.ViewHolder {
     private SparseArray<View> mViews;

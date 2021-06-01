@@ -12,9 +12,8 @@ import android.widget.EditText;
 import com.sky.R;
 
 /**
- * @author sky QQ:1136096189
- * @Description: TODO
- * @date 16/4/15 上午11:11
+ * Created by sky on 16/5/10 下午3:50.
+ * 带删除按钮的edittext
  */
 public class EditTextDel extends EditText {
     private Drawable image;

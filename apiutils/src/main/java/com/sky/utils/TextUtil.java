@@ -7,9 +7,8 @@ import android.widget.TextView;
 import java.text.DecimalFormat;
 
 /**
- * @author sky QQ:1136096189
- * @Description: TODO  String工具
- * @date 16/4/21 下午1:08
+ * Created by sky on 16/5/10 下午3:50.
+ * 处理text文字的工具类
  */
 public class TextUtil {
     /**

@@ -9,9 +9,8 @@ import com.sky.R;
 import java.io.Serializable;
 
 /**
- * @author sky QQ:1136096189
- * @Description: TODO
- * @date 16/4/6 下午10:01
+ * Created by sky on 16/5/10 下午3:50.
+ * activity跳转
  */
 public class JumpAct {
     /**

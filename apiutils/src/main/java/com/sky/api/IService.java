@@ -1,9 +1,7 @@
 package com.sky.api;
 
 /**
- * @author sky QQ:1136096189
- * @Description: TODO
- * @date 16/5/9 下午11:39
+ * Created by sky on 16/5/10 下午3:50.
  */
 public interface IService {
     /**

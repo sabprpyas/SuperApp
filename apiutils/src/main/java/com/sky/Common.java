@@ -1,10 +1,8 @@
 package com.sky;
 
 /**
- * @author LiBin
- * @ClassName: Common 常量类
- * @Description: 常量类
- * @date 2015年3月26日 下午5:51:37
+ * Created by sky on 16/5/10 下午3:50.
+ * 公共的常量
  */
 public class Common {
     //是否是第一次进程序的标志

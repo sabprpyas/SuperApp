@@ -7,8 +7,10 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-//Toast统一管理类
+/**
+ * Created by sky on 16/5/10 下午3:50.
+ * Toast统一管理类
+ */
 public class ToastUtils {
 
     private ToastUtils() {

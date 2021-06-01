@@ -7,9 +7,8 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 /**
- * @author 彬 QQ 1136096189
- * @Description: TODO 滑动的textview
- * @date 2015/8/17 15:30
+ * Created by sky on 16/5/10 下午3:50.
+ * 滑动的textview
  */
 public class ScrollingTextView extends TextView {
 

@@ -11,9 +11,8 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @author 彬 QQ 1136096189
- * @Description: TODO SharedPreferences管理类
- * @date 2015/8/17 15:30
+ * Created by sky on 16/5/10 下午3:50.
+ * SharedPreferences管理类
  */
 public class SPUtils {
     public SPUtils() {

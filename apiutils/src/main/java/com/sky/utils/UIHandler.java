@@ -5,9 +5,8 @@ import android.os.Looper;
 import android.os.Message;
 
 /**
- * @author 彬 QQ 1136096189
- * @Description: handler
- * @date 2015/8/17 15:30
+ * Created by sky on 16/5/10 下午3:50.
+ * 自定义的handler
  */
 public class UIHandler extends Handler {
 

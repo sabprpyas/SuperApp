@@ -7,10 +7,8 @@ import android.net.NetworkInfo;
 import android.telephony.TelephonyManager;
 
 /**
- * @author libin
- * @ClassName: NetworkJudgment
- * @Description: TODO 网络判断
- * @date 2014年12月19日 上午11:16:29
+ * Created by sky on 16/5/10 下午3:50.
+ * 网络判断
  */
 public class NetworkJudgment {
     /**

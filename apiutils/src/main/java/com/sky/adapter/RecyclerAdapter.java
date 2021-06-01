@@ -9,9 +9,8 @@ import android.view.ViewGroup;
 import java.util.List;
 
 /**
- * @author LiBin
- * @Description: RecyclerView的
- * @date 2015/9/29 16:46
+ * Created by sky on 16/5/10 下午3:50.
+ * RecyclerView的万能适配器
  */
 public abstract class RecyclerAdapter<T, VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
     //viewItem的点击事件监听

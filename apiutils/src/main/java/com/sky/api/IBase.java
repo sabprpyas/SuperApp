@@ -1,10 +1,6 @@
 package com.sky.api;
-
 /**
- * @author LiBin
- * @ClassName: IBase
- * @Description: TODO BaseActivity的接口，主要定义了Activity中常用的功能,BaseFragment中也可以用
- * @date 2015年3月26日 下午4:01:00
+ * Created by sky on 16/5/10 下午3:50.
  */
 public interface IBase {
 

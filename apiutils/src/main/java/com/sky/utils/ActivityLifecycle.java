@@ -7,10 +7,8 @@ import android.os.Bundle;
 import java.util.Stack;
 
 /**
- * @author sky
- * @ClassName: ActivityLifecycle
- * @Description: TODO activit
- * @date 2015年4月12日 下午1:33:47
+ * Created by sky on 16/5/10 下午3:50.
+ * activity管理类
  */
 public class ActivityLifecycle implements Application.ActivityLifecycleCallbacks {
     private Stack<Activity> activityStack;
@@ -92,6 +90,7 @@ public class ActivityLifecycle implements Application.ActivityLifecycleCallbacks
 
     /**
      * 获取当前activity的位置
+     *
      * @return
      */
     public int getCurrent() {
@@ -100,6 +99,7 @@ public class ActivityLifecycle implements Application.ActivityLifecycleCallbacks
 
     /**
      * 获取指定的activity
+     *
      * @param position
      * @return
      */
