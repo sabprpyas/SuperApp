@@ -8,7 +8,7 @@ import java.text.DecimalFormat;
 
 /**
  * Created by sky on 16/5/10 下午3:50.
- * 处理text文字的工具类
+ *
  */
 public class TextUtil {
     /**
