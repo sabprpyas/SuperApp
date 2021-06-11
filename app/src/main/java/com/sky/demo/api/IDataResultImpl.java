@@ -6,9 +6,8 @@ import com.sky.demo.utils.LogUtils;
 import org.xutils.ex.HttpException;
 
 /**
- * @author sky QQ:1136096189
- * @Description: idataresult的实现类
- * @date 15/11/20 下午1:59
+ * Created by sky on 15/12/9 下午8:54.
+ * idataresult的实现类
  */
 public abstract class IDataResultImpl<T> implements IDataResult<T>{
     @Override

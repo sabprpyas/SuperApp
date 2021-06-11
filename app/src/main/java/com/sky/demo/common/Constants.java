@@ -1,10 +1,8 @@
 package com.sky.demo.common;
 
 /**
- * @author LiBin
- * @ClassName: Constants 常量类
- * @Description: 常量类
- * @date 2015年3月26日 下午5:51:37
+ * Created by sky on 15/12/9 下午8:54.
+ * Constants 常量类
  */
 public class Constants {
     public static final String BASE_URL="http://uat.b.quancome.com/platform/api";

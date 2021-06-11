@@ -36,8 +36,8 @@ public class MemoryActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memory);
         setToolbar();
-        tv = $(R.id.tv);
-        recycle = $(R.id.recycle);
+        tv = getView(R.id.tv);
+        recycle = getView(R.id.recycle);
         registerForContextMenu(recycle);
 
         //获得ActivityManager服务的对象
@@ -69,10 +69,6 @@ public class MemoryActivity extends BaseActivity {
                         dialog.cancel();
                     }
                 }).create().show();
-            }
-
-            @Override
-            public void onItemLongClick(View view, int position) {
             }
         });
         recycle.setAdapter(adapter);

@@ -1,6 +1,7 @@
 package com.sky.utils;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 
@@ -49,15 +50,21 @@ public class JumpAct {
     }
 
     public static void jumpActivity(Context packageContext, String componentName) {
-        Intent intent = new Intent();
-        intent.setClassName(packageContext, componentName);
-        jumpActivity(packageContext, intent);
+        jumpActivity(packageContext, new Intent().setClassName(packageContext, componentName));
+    }
+
+    public static void jumpActivity(String component, Context packageContext) {
+        ComponentName componentName = new ComponentName(packageContext, component);
+        jumpActivity(packageContext, new Intent().setComponent(componentName));
     }
 
     public static void jumpActivity(Context context, Intent intent) {
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+//            context.startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(((Activity) context)).toBundle());
+//        else {
         context.startActivity(intent);
         ((Activity) context).overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
-        //overridePendingTransition(R.anim.in_from_up, R.anim.out_to_down);
+//        }
     }
 
 }

@@ -19,7 +19,6 @@ import android.os.Message;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -45,10 +44,8 @@ import com.sky.utils.UIHandler;
 import org.xutils.x;
 
 /**
- * @author LiBin
- * @ClassName: BaseActivity
- * @Description: TODO 基类activity
- * @date 2015年3月26日 下午4:01:00
+ * Created by sky on 2015年3月26日 下午4:01:00.
+ * activity基类
  */
 public class BaseActivity extends AppCompatActivity implements IBase, IService, Toolbar.OnMenuItemClickListener {
     @Override
@@ -93,7 +90,7 @@ public class BaseActivity extends AppCompatActivity implements IBase, IService, 
         stopService();
     }
 
-    protected <T extends View> T $(int id) {
+    protected <T extends View> T getView(int id) {
         return (T) findViewById(id);
     }
 
@@ -113,12 +110,8 @@ public class BaseActivity extends AppCompatActivity implements IBase, IService, 
     public void setToolbar() {
         try {
             ActivityInfo info = getPackageManager().getActivityInfo(getComponentName(), PackageManager.GET_META_DATA);
-            String title = (String) info.nonLocalizedLabel;
-            if (TextUtils.isEmpty(title))
-                title = (String) info.loadLabel(getPackageManager());
-            if (TextUtils.isEmpty(title))
-                title = getResources().getString(info.labelRes);
-            setToolbar(title + "");
+            //如果未设置返回程序的名称,即application里的label,
+            setToolbar((String) info.loadLabel(getPackageManager()));
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
@@ -130,7 +123,7 @@ public class BaseActivity extends AppCompatActivity implements IBase, IService, 
      * <include layout="@layout/activity_title"/>
      */
     public void setToolbar(String title) {
-        toolbar = $(R.id.toolbar);
+        toolbar = getView(R.id.toolbar);
         if (toolbar == null) return;
         toolbar.setTitle("");//默认为居左,所以隐藏
         tvTitle = (TextView) toolbar.findViewById(R.id.tv_title);
@@ -403,11 +396,11 @@ public class BaseActivity extends AppCompatActivity implements IBase, IService, 
     }
 
 
-    @Override
-    public void startActivity(Intent intent) {
-        super.startActivity(intent);
-        overridePendingTransition(com.sky.R.anim.in_from_right, com.sky.R.anim.out_to_left);
-    }
+//    @Override
+//    public void startActivity(Intent intent) {
+//        super.startActivity(intent);
+//        overridePendingTransition(com.sky.R.anim.in_from_right, com.sky.R.anim.out_to_left);
+//    }
 
     public <T extends Object> T getObject(String text, T a) {
         return (T) SPUtils.get(this, text, a);

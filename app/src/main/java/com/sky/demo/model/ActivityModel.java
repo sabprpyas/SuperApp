@@ -3,9 +3,8 @@ package com.sky.demo.model;
 import java.io.Serializable;
 
 /**
- * @author sky QQ:1136096189
- * @Description: activity信息类
- * @date 15/12/9 下午8:54
+ * Created by sky on 15/12/9 下午8:54.
+ * activity信息类
  */
 public class ActivityModel implements Serializable, Comparable<ActivityModel> {
     private String className;//activity的名称

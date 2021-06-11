@@ -6,11 +6,6 @@ import com.sky.demo.ui.activity.ErrorLogActivity;
 import org.xutils.common.Callback;
 import org.xutils.ex.HttpException;
 
-/**
- * @author sky QQ:1136096189
- * @Description: TODO
- * @date 15/12/22 下午1:25
- */
 public abstract class RequestCallBack<ResultType> implements Callback.CommonCallback<ResultType> {
     private final IDataResult resultCB;
 

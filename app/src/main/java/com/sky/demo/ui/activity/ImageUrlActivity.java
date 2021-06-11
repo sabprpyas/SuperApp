@@ -45,7 +45,7 @@ public class ImageUrlActivity extends BaseActivity implements SwipeRefreshLayout
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setToolbar();
-        FloatingActionButton fab = $(R.id.fab);
+        FloatingActionButton fab = getView(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,10 +86,6 @@ public class ImageUrlActivity extends BaseActivity implements SwipeRefreshLayout
         adapter.setOnItemClickListener(new LoaderURLAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-            }
-
-            @Override
-            public void onItemLongClick(View view, final int position) {
             }
         });
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {

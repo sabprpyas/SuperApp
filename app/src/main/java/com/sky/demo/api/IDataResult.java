@@ -4,9 +4,8 @@ package com.sky.demo.api;
 import org.xutils.ex.HttpException;
 
 /**
- * @author sky QQ:1136096189
- * @Description: 网络请求时使用的接口
- * @date 15/11/20 下午1:59
+ * Created by sky on 15/12/9 下午8:54.
+ * 网络请求时使用的接口
  */
 public interface IDataResult<T> {
     void onFailure(HttpException exception, int Code);

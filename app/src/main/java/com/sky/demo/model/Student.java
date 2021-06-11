@@ -2,11 +2,6 @@ package com.sky.demo.model;
 
 import java.util.Arrays;
 
-/**
- * @author LiBin
- * @Description: TODO 学生属性
- * @date 2015/9/17 11:01
- */
 public class Student extends Person implements Comparable<Student> {
     private static final long serialVersionUID = 1L;
     private String schoolName;//学校名称

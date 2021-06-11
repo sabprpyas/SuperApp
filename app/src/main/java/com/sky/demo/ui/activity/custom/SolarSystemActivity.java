@@ -30,11 +30,9 @@ import com.sky.utils.JumpAct;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
 
-
 /**
- * @author sky QQ:1136096189
- * @Description:卫星菜单栏
- * @date 15/11/28 下午12:38
+ * Created by sky on 15/12/9 下午8:54.
+ * 卫星菜单栏
  */
 @ContentView(R.layout.activity_solar)
 public class SolarSystemActivity extends BaseActivity {
@@ -48,7 +46,7 @@ public class SolarSystemActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setToolbar();
-        FloatingActionButton fab = $(R.id.fab);
+        FloatingActionButton fab = getView(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

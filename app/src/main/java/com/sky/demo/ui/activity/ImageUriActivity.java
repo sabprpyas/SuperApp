@@ -151,10 +151,6 @@ public class ImageUriActivity extends BaseActivity {
                 if (!imagePop.isShowing())
                     imagePop.showAtLocation(recyclerView, Gravity.CENTER, 0, 0);
             }
-
-            @Override
-            public void onItemLongClick(View view, final int position) {
-            }
         });
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override

@@ -8,11 +8,6 @@ import org.xutils.http.request.UriRequest;
 
 import java.lang.reflect.Type;
 
-/**
- * @author sky QQ:1136096189
- * @Description: TODO
- * @date 15/12/22 下午2:14
- */
 public class JsonToResponse implements ResponseParser {
     @Override
     public void checkResponse(UriRequest request) throws Throwable {

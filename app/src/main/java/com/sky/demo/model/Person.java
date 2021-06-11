@@ -1,11 +1,9 @@
 package com.sky.demo.model;
 
 import java.io.Serializable;
-
 /**
- * @author LiBin
- * @Description: TODO 人的基本属性
- * @date 2015/9/17 11:04
+ * Created by sky on 15/12/9 下午8:54.
+ * 人的基本属性
  */
 public class Person implements Serializable {
 

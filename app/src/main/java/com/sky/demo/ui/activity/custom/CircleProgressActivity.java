@@ -14,9 +14,8 @@ import android.widget.TextView;
 import com.sky.demo.R;
 import com.sky.demo.ui.BaseActivity;
 /**
- * @author 彬 QQ 1136096189
- * @Description: 自定义进度条布局,与textview字体大小颜色背景设置
- * @date 2015/8/17 15:30
+ * Created by sky on 15/12/9 下午8:54.
+ * 自定义进度条布局,与textview字体大小颜色背景设置
  */
 public class CircleProgressActivity extends BaseActivity {
 

@@ -15,6 +15,7 @@ import java.util.List;
 public abstract class RecyclerAdapter<T, VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
     //viewItem的点击事件监听
     protected OnItemClickListener onItemClickListener;
+    protected OnItemLongClickListener itemLongClickListener;
     protected Context context;
     protected List<T> datas;
     //主体与底部布局判断
@@ -34,32 +35,38 @@ public abstract class RecyclerAdapter<T, VH extends RecyclerView.ViewHolder> ext
         this.layoutId = layoutId;
         this.layoutFootViewId = layoutFootViewId;
     }
-    //viewItem的点击事件监听接口
-    public interface OnItemClickListener {
-        void onItemClick(View view, int position);
 
-        void onItemLongClick(View view, int position);
-    }
-
+    /**
+     * 子view的按钮监听
+     * @param onItemClickListener
+     */
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;
     }
 
-    public int getLayoutId() {
-        return layoutId;
+    /**
+     * 长按监听
+     * @param itemLongClickListener
+     */
+    public void setOnItemLongClickListener(OnItemLongClickListener itemLongClickListener) {
+        this.itemLongClickListener = itemLongClickListener;
     }
 
-    public void setLayoutId(int layoutId) {
-        this.layoutId = layoutId;
-    }
-
-    public int getLayoutFootViewId() {
-        return layoutFootViewId;
-    }
-
-    public void setLayoutFootViewId(int layoutFootViewId) {
-        this.layoutFootViewId = layoutFootViewId;
-    }
+//    public int getLayoutId() {
+//        return layoutId;
+//    }
+//
+//    public void setLayoutId(int layoutId) {
+//        this.layoutId = layoutId;
+//    }
+//
+//    public int getLayoutFootViewId() {
+//        return layoutFootViewId;
+//    }
+//
+//    public void setLayoutFootViewId(int layoutFootViewId) {
+//        this.layoutFootViewId = layoutFootViewId;
+//    }
 
     public List<T> getDatas() {
         return datas;
@@ -79,14 +86,16 @@ public abstract class RecyclerAdapter<T, VH extends RecyclerView.ViewHolder> ext
         this.datas.clear();
         notifyDataSetChanged();
     }
+
     /**
      * 添加item,默认从最后添加
      *
      * @param obj
      */
     public void addItem(T obj) {
-        addItem(obj,LASTITEM);
+        addItem(obj, LASTITEM);
     }
+
     /**
      * 添加item
      *
@@ -152,7 +161,7 @@ public abstract class RecyclerAdapter<T, VH extends RecyclerView.ViewHolder> ext
             holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
-                    onItemClickListener.onItemLongClick(holder.itemView, holder.getLayoutPosition());
+                    itemLongClickListener.onItemLongClick(holder.itemView, holder.getLayoutPosition());
                     return false;
                 }
             });
@@ -160,11 +169,36 @@ public abstract class RecyclerAdapter<T, VH extends RecyclerView.ViewHolder> ext
         onAchieveHolder(holder, position);
     }
 
+    /**
+     * 主体view
+     * @param view
+     * @return
+     */
     protected abstract VH onCreateBodyHolder(View view);
 
+    /**
+     * 底部view
+     * @param footView
+     * @return
+     */
     protected VH onCreateFootHolder(View footView) {
         return null;
     }
 
+    /**
+     * 加载数据内容于view上
+     * @param holder
+     * @param position
+     */
     protected abstract void onAchieveHolder(VH holder, int position);
+
+    //viewItem的点击事件监听接口
+    public interface OnItemClickListener {
+        void onItemClick(View view, int position);
+    }
+
+    public interface OnItemLongClickListener {
+        void onItemLongClick(View view, int position);
+    }
+
 }

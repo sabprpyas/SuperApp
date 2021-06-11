@@ -1,11 +1,8 @@
 package com.sky.demo.model;
 
 import java.io.Serializable;
-
 /**
- * @author sky QQ:1136096189
- * @Description: TODO
- * @date 15/12/27 下午3:54
+ * Created by sky on 15/12/9 下午8:54.
  */
 public class ProcessEntity implements Serializable {
 

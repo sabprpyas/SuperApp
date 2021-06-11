@@ -19,12 +19,9 @@ import com.sky.demo.api.JsonToResponse;
 
 import org.xutils.http.annotation.HttpResponse;
 
-
 /**
+ * Created by sky on 15/12/9 下午8:54.
  * Api响应结果的封装类.
- *
- * @author sky QQ:1136096189
- * @date 15/12/9 下午8:54
  */
 @HttpResponse(parser = JsonToResponse.class)
 public class ApiResponse<T> {

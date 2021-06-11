@@ -27,11 +27,9 @@ import com.sky.utils.JumpAct;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
-
 /**
- * @author 彬 QQ 1136096189
- * @Description: 横向侧滑栏  流式布局
- * @date 2015/8/17 15:30
+ * Created by sky on 15/12/9 下午8:54.
+ * 横向侧滑栏  流式布局
  */
 @ContentView(R.layout.activity_sliding)
 public class SlidingMenuActivity extends BaseActivity implements View.OnClickListener {

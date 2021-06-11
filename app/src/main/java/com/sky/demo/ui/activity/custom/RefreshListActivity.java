@@ -19,11 +19,6 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
 
-/**
- * @author 彬 QQ 1136096189
- * @Description: listview重写，刷新与载入
- * @date 2015/8/17 15:30
- */
 public class RefreshListActivity extends BaseActivity implements RefreshListView.OnRefreshListener {
 
     private RefreshListView mListView;

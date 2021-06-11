@@ -3,11 +3,9 @@ package com.sky.demo.model;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-
 /**
- * @author LiBin
- * @Description: TODO 员工的属性
- * @date 2015/9/17 11:01
+ * Created by sky on 15/12/9 下午8:54.
+ *  员工的属性
  */
 public class Employee extends Person {
     private static final long serialVersionUID = 1L;

@@ -83,11 +83,6 @@ public class FloderPop extends BasePop<ImageFloder> {
                 if (itemClickListener != null)
                     itemClickListener.onItemClick(position);
             }
-
-            @Override
-            public void onItemLongClick(View view, int position) {
-
-            }
         });
     }
 

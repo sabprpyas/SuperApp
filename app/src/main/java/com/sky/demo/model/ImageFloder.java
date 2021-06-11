@@ -2,11 +2,6 @@ package com.sky.demo.model;
 
 import java.io.Serializable;
 
-/**
- * @author sky QQ:1136096189
- * @Description: TODO 文件夹属性
- * @date 16/1/6 下午5:22
- */
 public class ImageFloder implements Serializable {
     private String dirPath;//文件夹的路径
     private String firstImagePath;//文件夹中的第一张图片，用于显示

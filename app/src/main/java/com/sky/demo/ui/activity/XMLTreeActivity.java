@@ -103,7 +103,8 @@ public class XMLTreeActivity extends BaseActivity implements SwipeRefreshLayout.
 //                showToast("onItemClick=" + position);
                 adapter.toggle(position);
             }
-
+        });
+        adapter.setOnItemLongClickListener(new TreeAdapter.OnItemLongClickListener() {
             @Override
             public void onItemLongClick(View view, final int position) {
                 final EditText ed = new EditText(XMLTreeActivity.this);
