@@ -104,7 +104,7 @@ public class MainActivity extends BaseActivity implements SwipeRefreshLayout.OnR
         adapter.setOnItemClickListener(new MainAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                JumpAct.jumpActivity(MainActivity.this,
+                 JumpAct.jumpActivity(MainActivity.this,
                         adapter.getDatas().get(position).getComponentName());
             }
         });

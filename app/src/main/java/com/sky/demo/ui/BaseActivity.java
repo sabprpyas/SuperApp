@@ -58,7 +58,6 @@ public class BaseActivity extends AppCompatActivity implements IBase, IService, 
 //        startService();//启动服务
 //        bindService();//启动bind绑定服务
         setHandler();
-
     }
 
     @Override

@@ -1,6 +1,8 @@
 package com.sky.demo.utils.pending;
 
-import android.app.*;
+import android.app.Activity;
+import android.app.ActivityManager;
+import android.app.Service;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -8,38 +10,14 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Environment;
 
-import com.sky.demo.utils.pending.FileUtils;
-
 import java.io.File;
 import java.util.List;
 
-/**
- * @author sky
- * @ClassName: AppUtils
- * @Description: TODO 跟App相关的辅助类,待修改
- * @date 2015年4月12日 下午1:33:47
- */
 public class AppUtils {
 
     private AppUtils() {
         /* cannot be instantiated 不能被实例化*/
         throw new UnsupportedOperationException("cannot be instantiated");
-    }
-
-    /**
-     * 获取应用程序名称
-     * @param context
-     * @return
-     */
-    public static String getAppName(Context context) {
-        try {
-            PackageInfo packageInfo = context.getPackageManager()
-                    .getPackageInfo(context.getPackageName(), 0);
-            return context.getResources().getString(packageInfo.applicationInfo.labelRes);
-        } catch (NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 
     /**
@@ -67,21 +45,12 @@ public class AppUtils {
      */
     public static int getVersionCode(Context context) {
         try {
-            PackageInfo packageInfo = context.getPackageManager()
-                    .getPackageInfo(context.getPackageName(), 0);
+            PackageInfo packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
             return packageInfo.versionCode;
         } catch (NameNotFoundException e) {
             e.printStackTrace();
         }
         return 0;
-    }
-
-    /**
-     * @return
-     * @see {@linkplain #getMyCacheDir(String)}
-     */
-    public static String getMyCacheDir() {
-        return getMyCacheDir(null);
     }
 
     /**

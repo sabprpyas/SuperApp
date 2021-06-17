@@ -61,7 +61,7 @@ public class SolarSystemActivity extends BaseActivity {
         });
         setSolarSystem();
         TextView tv = (TextView) findViewById(R.id.id_tv);
-        tv.setText(AppUtils.getAppName(this) + "\n" + "v" + AppUtils.getVersionName(this)+"\n"+"可以使用ViewStub来执行惰性加载");
+        tv.setText("v" + AppUtils.getVersionName(this)+"\n"+"可以使用ViewStub来执行惰性加载");
     }
 
     private void setSolarSystem() {

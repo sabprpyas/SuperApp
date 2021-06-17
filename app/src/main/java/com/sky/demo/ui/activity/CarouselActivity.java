@@ -15,12 +15,6 @@ import com.sky.demo.common.Constants;
 import com.sky.demo.ui.BaseActivity;
 import com.sky.demo.utils.ScreenUtils;
 
-
-/**
- * @author LiBin
- * @Description: TODO 轮播图
- * @date 2015年3月26日 下午4:01:00
- */
 public class CarouselActivity extends BaseActivity {
     private ViewPager viewPager;
     private LinearLayout group_point;
